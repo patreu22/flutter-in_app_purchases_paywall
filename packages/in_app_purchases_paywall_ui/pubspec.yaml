@@ -13,8 +13,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_inappwebview: ^5.4.3+4
-  in_app_purchases_interface: ^0.0.8
+  flutter_inappwebview: ^5.4.3+8
+  in_app_purchases_interface:
+    ^0.0.8
     #path: ../in_app_purchases_interface
 
 dev_dependencies:
