@@ -10,8 +10,10 @@ class PaywallScaffold extends StatelessWidget {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   final Widget child;
   final String? appBarTitle;
+  final Color? foregroundColor;
 
-  PaywallScaffold({required this.child, this.appBarTitle});
+  PaywallScaffold(
+      {required this.child, this.appBarTitle, this.foregroundColor});
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +24,7 @@ class PaywallScaffold extends StatelessWidget {
           title: Text(appBarTitle ?? "Premium"),
           elevation: 0.0,
           actions: [],
+          foregroundColor: foregroundColor,
         ),
         body: child);
   }
