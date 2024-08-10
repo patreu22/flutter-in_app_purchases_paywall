@@ -42,7 +42,7 @@ class MoritzPaywallPurchase extends StatelessWidget {
                       padding: EdgeInsets.only(left: 16, right: 16),
                       child: Text(
                         PaywallDataIW.of(context).subTitle ?? "",
-                        style: theme.textTheme.subtitle1,
+                        style: theme.textTheme.titleMedium,
                       )),
                   if (paywallData.campaignWidget != null)
                     paywallData.campaignWidget!,

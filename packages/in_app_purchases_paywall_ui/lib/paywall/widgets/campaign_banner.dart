@@ -21,13 +21,13 @@ class CampaignBanner extends StatelessWidget {
           children: [
             Text(
               headline,
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleLarge,
               textAlign: TextAlign.center,
             ),
             // sub Title
             if (subTitle != null)
               Text(subTitle!,
-                  style: Theme.of(context).textTheme.subtitle1,
+                  style: Theme.of(context).textTheme.titleMedium,
                   textAlign: TextAlign.center),
             // Sub Content
             if (subContent != null) subContent!

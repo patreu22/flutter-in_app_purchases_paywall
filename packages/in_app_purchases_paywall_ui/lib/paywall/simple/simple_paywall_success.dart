@@ -35,7 +35,7 @@ class SimplePaywallSuccess extends StatelessWidget {
             padding: EdgeInsets.only(left: 16, top: 8, right: 16, bottom: 8),
             child: Text(
               successTitle!,
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
         ),
@@ -48,7 +48,7 @@ class SimplePaywallSuccess extends StatelessWidget {
             padding: EdgeInsets.only(left: 16, top: 0, right: 16, bottom: 0),
             child: Text(
               successSubTitle!,
-              style: Theme.of(context).textTheme.bodyText2,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           ),
         ),

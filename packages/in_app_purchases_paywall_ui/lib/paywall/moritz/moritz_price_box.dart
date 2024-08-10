@@ -46,7 +46,7 @@ class MoritzPriceBox extends StatelessWidget {
                   Text(
                     "${data.durationShort.replaceAll(" ", "\n")}",
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline6?.apply(
+                    style: Theme.of(context).textTheme.titleLarge?.apply(
                         color: Theme.of(context).colorScheme.onPrimaryContainer,
                         fontWeightDelta: 2),
                   ),
@@ -96,7 +96,7 @@ class _HighlightedWidget extends StatelessWidget {
           data.highlightText!,
           style: Theme.of(context)
               .textTheme
-              .bodyText1
+              .bodyLarge
               ?.apply(color: Theme.of(context).colorScheme.onPrimary),
         ),
         alignment: Alignment.center,
@@ -146,11 +146,11 @@ class _PricePerMonthWidget extends StatelessWidget {
           children: [
             Text(
               "${pricePerMonth.toStringAsFixed(2)}${data.currencySymbol}",
-              style: Theme.of(context).textTheme.subtitle1?.apply(
+              style: Theme.of(context).textTheme.titleMedium?.apply(
                   color: Theme.of(context).colorScheme.onPrimaryContainer),
             ),
             Text("/${data.monthText ?? "month"}",
-                style: Theme.of(context).textTheme.subtitle2?.apply(
+                style: Theme.of(context).textTheme.titleSmall?.apply(
                     color: Theme.of(context).colorScheme.onPrimaryContainer))
           ]),
     );
@@ -167,7 +167,7 @@ class _PriceWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     TextStyle? textStyle = Theme.of(context)
         .textTheme
-        .subtitle1
+        .titleMedium
         ?.apply(color: Theme.of(context).colorScheme.onPrimaryContainer);
     if (highlight) {
       textStyle = textStyle?.apply(fontWeightDelta: 2);
@@ -191,13 +191,13 @@ class _PercentageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle? textStyle = Theme.of(context).textTheme.headline6;
+    TextStyle? textStyle = Theme.of(context).textTheme.titleLarge;
     if (data.dealPercentage >= 50) {
       textStyle =
-          Theme.of(context).textTheme.headline5?.apply(fontWeightDelta: 3);
+          Theme.of(context).textTheme.headlineSmall?.apply(fontWeightDelta: 3);
     } else if (data.dealPercentage >= 30) {
       textStyle =
-          Theme.of(context).textTheme.headline6?.apply(fontWeightDelta: 1);
+          Theme.of(context).textTheme.titleLarge?.apply(fontWeightDelta: 1);
     }
     textStyle = textStyle?.apply(
         color: Theme.of(context).colorScheme.primary,

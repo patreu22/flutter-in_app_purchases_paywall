@@ -25,7 +25,7 @@ class SimpleBulletPoints extends StatelessWidget {
                       child: Text(
                         bulletPoint.text,
                         maxLines: 2,
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       padding: EdgeInsets.all(16),
                     ),

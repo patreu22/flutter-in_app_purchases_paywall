@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         // color scheme
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber, brightness: Brightness.light),
         elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(primary: Colors.green)
+          style: ElevatedButton.styleFrom(backgroundColor: Colors.green)
         )
       ),
       supportedLocales: [

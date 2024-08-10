@@ -14,6 +14,6 @@ class MoritzRestoreRow extends StatelessWidget {
         onPressed: () {
           subscriptionData.onRestoreTap();
         },
-        child: Text(restoreText!, style: Theme.of(context).textTheme.button));
+        child: Text(restoreText!, style: Theme.of(context).textTheme.labelLarge));
   }
 }

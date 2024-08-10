@@ -51,7 +51,7 @@ class SimplePaywallPurchase extends StatelessWidget {
         padding: EdgeInsets.only(left: 16, top: 32, right: 16, bottom: 16),
         child: Text(
           title ?? "Go Premium",
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
     );
@@ -61,7 +61,7 @@ class SimplePaywallPurchase extends StatelessWidget {
       elements.add(Container(
           margin: EdgeInsets.only(left: 16, right: 16),
           child:
-              Text(subTitle!, style: Theme.of(context).textTheme.bodyText2)));
+              Text(subTitle!, style: Theme.of(context).textTheme.bodyMedium)));
     }
 
     elements.add(Container(

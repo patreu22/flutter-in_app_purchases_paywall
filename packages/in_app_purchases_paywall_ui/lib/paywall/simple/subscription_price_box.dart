@@ -46,7 +46,7 @@ class SubscriptionPriceBox extends StatelessWidget {
                                   Text(
                                     data.durationTitle,
                                     style:
-                                        Theme.of(context).textTheme.bodyText1,
+                                        Theme.of(context).textTheme.bodyLarge,
                                   ),
                                   Container(
                                     padding: EdgeInsets.all(8),
@@ -59,7 +59,7 @@ class SubscriptionPriceBox extends StatelessWidget {
                                       "${data.price} /${shouldBreakText ? "\n" : " "}${data.durationShort.replaceAll(" ", "\u{00A0}")}",
                                       textAlign: TextAlign.center,
                                       style:
-                                          Theme.of(context).textTheme.bodyText2,
+                                          Theme.of(context).textTheme.bodyMedium,
                                     ),
                                   )
                                 ],
@@ -80,7 +80,7 @@ class SubscriptionPriceBox extends StatelessWidget {
                                       "-${data.dealPercentage}%",
                                       style: Theme.of(context)
                                           .textTheme
-                                          .caption
+                                          .bodySmall
                                           ?.apply(
                                               color: Theme.of(context)
                                                   .colorScheme

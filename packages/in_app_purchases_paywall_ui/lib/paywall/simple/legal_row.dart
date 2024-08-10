@@ -12,21 +12,19 @@ class LegalRow extends StatelessWidget {
   LegalRow(this.theme, this.tosData, this.ppData);
 
   /// Opens Browser onTap with the given URL
-  _onTapTos() async {
-    await browser.open(
-        url: Uri.parse(tosData!.url),
-        options: ChromeSafariBrowserClassOptions(
-            android: AndroidChromeCustomTabsOptions(),
-            ios: IOSSafariOptions(barCollapsingEnabled: true)));
-  }
+_onTapTos() async {
+  await browser.open(
+    url: WebUri(tosData!.url),
+    settings: ChromeSafariBrowserSettings(barCollapsingEnabled: true)
+  );
+}
 
   /// Opens Browser onTap with the given URL
   _onTapPp() async {
     await browser.open(
-        url: Uri.parse(ppData!.url),
-        options: ChromeSafariBrowserClassOptions(
-            android: AndroidChromeCustomTabsOptions(),
-            ios: IOSSafariOptions(barCollapsingEnabled: true)));
+        url: WebUri(ppData!.url),
+        settings: ChromeSafariBrowserSettings(barCollapsingEnabled: true)
+    );
   }
 
   Widget get tosItem => tosData == null
@@ -37,7 +35,7 @@ class LegalRow extends StatelessWidget {
             tosData?.name ?? "Terms of Service",
             style: TextStyle(
                 decoration: TextDecoration.underline,
-                color: theme.textTheme.button?.color ?? theme.primaryColor,
+                color: theme.textTheme.labelLarge?.color ?? theme.primaryColor,
                 fontSize: 12),
           ),
         );
@@ -50,7 +48,7 @@ class LegalRow extends StatelessWidget {
             ppData?.name ?? "Privacy Policy",
             style: TextStyle(
                 decoration: TextDecoration.underline,
-                color: theme.textTheme.button?.color ?? theme.primaryColor,
+                color: theme.textTheme.labelLarge?.color ?? theme.primaryColor,
                 fontSize: 12),
           ),
         );

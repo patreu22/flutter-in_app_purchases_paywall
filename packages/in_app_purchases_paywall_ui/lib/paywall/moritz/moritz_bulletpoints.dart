@@ -26,7 +26,7 @@ class MoritzBulletPoints extends StatelessWidget {
                           child: Text(
                             bulletPoint.text,
                             maxLines: 2,
-                            style: theme.textTheme.bodyText1,
+                            style: theme.textTheme.bodyLarge,
                           ),
                           padding: EdgeInsets.only(
                               left: 16, right: 16, top: 8, bottom: 8),
