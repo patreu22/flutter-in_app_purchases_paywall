@@ -18,7 +18,7 @@ class MoritzBulletPoints extends StatelessWidget {
                         Container(
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: theme.colorScheme.primaryContainer),
+                              color: theme.textTheme.bodyLarge!.color),
                           height: 8,
                           width: 8,
                         ),
